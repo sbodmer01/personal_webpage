@@ -281,8 +281,13 @@ footer a:hover {
     }
 
     header nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        margin-top: 1.5rem;
         gap: 1rem;
+    }
+
+    header h1 {
+        line-height: 1.2;
     }
 
     .hero h2 {
@@ -291,14 +296,41 @@ footer a:hover {
 
     .horizontal-timeline {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        /* align-items: flex-start; */
     }
 
     .timeline-event {
         margin-bottom: 2rem;
     }
 
+    .timeline-date{
+        margin-right:7rem;
+    }
+
     .horizontal-timeline::before {
-        display: none; /* Hide the line on smaller screens */
+        content: '';
+        position: absolute;
+        top: 87%;
+        left: 50%;
+        width: 2px;
+        height: 290%;
+        background-color: #00796B;
+        transform: translateX(-50%);
+        /* z-index: -1; */
+    }
+}
+
+@media (max-width: 590px) {
+    .horizontal-timeline::before {
+        content: '';
+        position: absolute;
+        top: 112%;
+        left: 50%;
+        width: 2px;
+        height: 290%;
+        background-color: #00796B;
+        transform: translateX(-50%);
+        /* z-index: -1; */
     }
 }
