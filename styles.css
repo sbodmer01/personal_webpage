@@ -85,7 +85,7 @@ header {
 /* Main Content */
 .main-content {
     margin-top: 80px;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 4rem;
 }
 
 .grid {
@@ -624,4 +624,64 @@ header {
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Quick Contact Section */
+.quick-contact {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.email-btn {
+    background: linear-gradient(135deg, #9d4e91, #68bcb1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.linkedin-btn {
+    background: linear-gradient(135deg, #358ba5, #d694c9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        max-width: 250px;
+    }
 }
