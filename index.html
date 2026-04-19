@@ -85,9 +85,9 @@
       position: absolute; border-radius: 50%; filter: blur(70px);
       pointer-events: none;
     }
-    .blob-1 { width:480px; height:480px; background: rgba(74,140,79,0.13); top:-80px; right:-60px; animation: drift 10s ease-in-out infinite; }
-    .blob-2 { width:340px; height:340px; background: rgba(232,180,200,0.18); bottom:60px; left:-80px; animation: drift 13s ease-in-out infinite reverse; }
-    .blob-3 { width:220px; height:220px; background: rgba(123,184,212,0.15); top:30%; left:20%; animation: drift 9s ease-in-out infinite 2s; }
+    .blob-1 { width:480px; height:480px; background: rgba(74, 140, 80, 0.173); top:-80px; right:-60px; animation: drift 10s ease-in-out infinite; }
+    .blob-2 { width:340px; height:340px; background: rgba(232, 180, 200, 0.298); bottom:60px; left:-80px; animation: drift 13s ease-in-out infinite reverse; }
+    .blob-3 { width:220px; height:220px; background: rgba(123, 184, 212, 0.233); top:30%; left:20%; animation: drift 9s ease-in-out infinite 2s; }
 
     @keyframes drift {
       0%,100% { transform: translate(0,0) scale(1); }
@@ -541,7 +541,6 @@
 
     /* ════════════════════════════════════════════════
        PHONE POPUP MODAL SYSTEM
-       Inspired by the cases.js portfolio popup design
     ════════════════════════════════════════════════ */
 
     /* Backdrop */
@@ -1075,7 +1074,7 @@
         <p class="proj-desc">Tool leveraging open-source libraries for medical imaging analysis and rich 3D visualization.</p>
 
         <div class="proj-tags">
-          <span class="proj-tag">Med. Imaging</span><span class="proj-tag">Python</span>
+          <span class="proj-tag">Med. Imaging</span><span class="proj-tag">Python</span><span class="proj-tag">Qt</span>
         </div>
       </div>
     </div>
@@ -1089,7 +1088,7 @@
         <h3 class="proj-title">FireStack App</h3>
         <p class="proj-desc">Full-stack web app to help students manage academic workflows, deadlines, and resources in one place.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">Flask</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span><span class="proj-tag">HTML/CSS</span>
         </div>
       </div>
     </div>
@@ -1115,7 +1114,7 @@
         <h3 class="proj-title">NYT Games Agentic Solver</h3>
         <p class="proj-desc">A tool for solving New York Times games using agentic approaches.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">AI</span><span class="proj-tag">Python</span><span class="proj-tag">Gymnasium</span>
         </div>
       </div>
     </div>
@@ -1129,7 +1128,7 @@
         <h3 class="proj-title">FlyLab App</h3>
         <p class="proj-desc">Website design and implementation for a research lab.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">Website</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">UI Design</span>
         </div>
       </div>  
     </div>
@@ -1143,7 +1142,7 @@
         <h3 class="proj-title">MaterialStudio App</h3>
         <p class="proj-desc">A tool for visualizing and analyzing material properties.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">Web App</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">Graphics</span>
         </div>
       </div>
     </div>
@@ -1157,7 +1156,7 @@
         <h3 class="proj-title">Research Agent</h3>
         <p class="proj-desc">An AI-powered research assistant for automating literature reviews and data analysis.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">Web App</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">AI</span>
         </div>
       </div>
     </div>
@@ -1171,7 +1170,7 @@
         <h3 class="proj-title">CheeseClub Flyer Design</h3>
         <p class="proj-desc">A creative flyer design for a local cheese club.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Web App</span><span class="proj-tag">Python</span><span class="proj-tag">JS</span>
+          <span class="proj-tag">Design</span><span class="proj-tag">Founder/Chief Media Officer</span>
         </div>
       </div>  
     </div>
@@ -1413,69 +1412,67 @@ updatePhoneTime();
 setInterval(updatePhoneTime, 10000);
 
 /* ════════════════════════════════════
-   PROJECT DATA  (cases.js–inspired structure)
-   Each entry mirrors the cases.js schema:
+   PROJECT DATA
+   Each entry has the following schema:
      title, bio[role, timeline], thumbnail.brief[],
      content.tldr, tags[], link?
 ════════════════════════════════════ */
 const projects = {
   pymol: {
-    title: "Presets Panel in PyMOL",
+    title: "PyMOL work",
     emoji: "🧬",
     theme: "pymol",
     bio: { role: "SDE Intern", timeline: "Summer 2025", stack: "Python · Qt · C++" },
-    tldr: "Designed and shipped a full-featured Presets Panel inside Schrödinger's PyMOL — one of the most widely used molecular visualization tools in academia and pharma. The panel lets users manage, search, favourite and live-edit render presets with dark/light mode support and auto-save.",
+    tldr: "Designed and shipped a full-featured presets panel, as well as added drag-drop functionality to movie maker, inside Schrödinger's PyMOL, a widely used molecular visualization tools in academia and pharma. The panel lets users manage, search, favourite and live-edit render presets with dark/light mode support and auto-save functionality.",
     bullets: [
-      "Built smart search + filter UI supporting thousands of presets with sub-50ms response.",
-      "Drag-and-drop reordering for the movie editor timeline.",
-      "Favouriting system with persistent user prefs via Qt settings.",
-      "Dark/light mode-adaptive color system, auto-save on every change.",
-      "Helped migrate codebase from Qt5 → Qt6 with zero regressions.",
+      "Built smart search + filter UI",
+      "Drag-and-drop reordering for the movie editor timeline",
+      "Favouriting system with persistent user prefs via Qt settings",
+      "Dark/light mode-adaptive color system, auto-save on every change",
+      "Helped migrate codebase from Qt5 → Qt6 ",
     ],
-    tags: ["Python", "Qt", "UI/UX", "Chemistry", "PyMOL"],
+    tags: ["Python", "Qt", "UI/UX", "Chemistry", "C++"],
     link: null,
   },
   iridescent: {
-    title: "Iridescent Material",
+    title: "Thin-film Iridescence Shader",
     emoji: "🫧",
     theme: "iridescent",
-    bio: { role: "Solo project", timeline: "Fall 2024", stack: "C++ · BSDF · lajolla" },
-    tldr: "Implemented a physically-based thin-film iridescence BSDF inside the lajolla renderer. The shader simulates real-world light interference — exactly how soap bubbles and beetle shells shift color with viewing angle.",
+    bio: { role: "Solo project", timeline: "Winter 2025", stack: "C++ · lajolla" },
+    tldr: "Implemented a physically-based thin-film iridescence BSDF inside the lajolla renderer. The shader simulates real-world light interference (to some extent), like how soap bubbles and beetle shells shift color with viewing angle.",
     bullets: [
-      "Derived thin-film interference equations from first principles (Fresnel + optical path difference).",
-      "Implemented as a layered BSDF on top of the existing conductor model.",
-      "Parameterized by film thickness, IOR, and roughness for artist-friendly controls.",
-      "Renders produce correct hue shifts as viewing angle changes — not a texture trick.",
+      "Compute reflectance and transmittance properties of thin film using Airy summation method",
+      "Extended lajolla's BSDF framework with a custom thinfilmbsdf supporting wavelength dependent color shifts and angle dependent iridescence",
+      "Implemented full Cook-Torrance microfacet pipeline: anisotropic GGX normal distribution, Smith geometric attenuation, and visible normal importance sampling",
     ],
-    tags: ["C++", "Computer Graphics", "Image Synthesis", "Physically Based Rendering"],
+    tags: ["C++", "Physiucally Based Rendering", "Image Synthesis"],
     link: null,
   },
   nifti: {
-    title: "NIfTI Image Analysis",
+    title: "Ultrasound Image Analysis",
     emoji: "🔬",
     theme: "nifti",
-    bio: { role: "Solo project", timeline: "2024", stack: "Python · nibabel · matplotlib" },
-    tldr: "A Python tool for reading, analyzing and visualizing NIfTI (.nii) brain scan files — the standard format in neuroimaging research. Built interactive slice viewers and region statistics for exploratory analysis.",
+    bio: { role: "Summer Intern/Part-time", timeline: "2021", stack: "Python · NiBabel · NumPy · Qt " },
+    tldr: "A Python tool for reading, analyzing and visualizing 4D/3D NIfTI (.nii) ultrasound scan files. Built interactive slice viewers for exploratory analysis.",
     bullets: [
-      "Reads .nii and .nii.gz files using nibabel; renders axial, coronal, and sagittal slices.",
+      "Reads .nii and .nii.gz files; renders axial, coronal, and sagittal slices.",
       "Scrollable slice navigator so you can explore the full 3D volume interactively.",
-      "Intensity histograms and per-region summary stats via matplotlib.",
-      "Used in a course project analyzing structural MRI data.",
+      "Created a tool to allow user to select a ROI in any slice by drawing free-form shapes",
+      "Did binary masking of 2D ROI's and regions between slices were interpolated to create 3D masks for volumetric analysis",
     ],
-    tags: ["Python", "Medical Imaging", "nibabel", "UI/UX", "Neuroscience"],
+    tags: ["Python", "Medical Imaging", "NiBabel", "UI/UX", "Qt"],
     link: null,
   },
   firestack: {
     title: "FireStack App",
     emoji: "📚",
     theme: "firestack",
-    bio: { role: "Full-stack developer", timeline: "2022", stack: "Python · Flask · JS · HTML/CSS" },
-    tldr: "A student productivity hub — FireStack brings task tracking, flashcard decks, and deadline management into a single clean interface. Built from scratch as a full-stack project to help students manage academic overload.",
+    bio: { role: "Full-stack developer", timeline: "2024", stack: "Python · Flask · JS · HTML/CSS" },
+    tldr: "A productivity application integrating task management, calendar synchronization, and job tracking all in a single clean interface. Built from scratch end-to-end to help students manage academic overload.",
     bullets: [
-      "Task board with due-date tracking, priority flags, and completion status.",
-      "Spaced-repetition flashcard engine for exam prep.",
-      "Course resource organizer — links, files, and notes all in one place.",
-      "Responsive UI that works on mobile and desktop.",
+      "Task board with due-date tracking, priority flags, and completion status",
+      "Calendar sync with Google Calendar API for unified deadline management",
+      "Job tracker to organize applications, interviews, and offers in one place",
     ],
     tags: ["Python", "Flask", "JavaScript", "HTML/CSS", "Full-Stack"],
     link: null,
@@ -1484,15 +1481,15 @@ const projects = {
     title: "TV Show Ratings",
     emoji: "🎞",
     theme: "tvshow",
-    bio: { role: "Designer + Developer", timeline: "Ongoing", stack: "UI Design · HTML/CSS" },
-    tldr: "A lovingly hand-crafted visual catalogue of every show I've watched — each entry is rated, reviewed, and styled to match the show's aesthetic. Part data, part art project.",
+    bio: { role: "Solo Project", timeline: "Ongoing", stack: "UI Design · HTML/CSS" },
+    tldr: "A visual catalogue of every show I've watched (kind of a guilty pleasure). Each entry is rated, reviewed, and styled to match the show's aesthetic. Part data, part art project.",
     bullets: [
-      "Custom card design per show era — neon for 80s, muted for prestige dramas.",
+      "Custom card design per show era based on my rating, how I am feeling about it.",
       "Personal rating system across 5 dimensions (writing, acting, visuals, pacing, rewatchability).",
       "Short spoiler-free review for each show.",
       "Sortable by genre, year, and overall score.",
     ],
-    tags: ["UI Design", "HTML/CSS", "Personal Project", "Visual Design"],
+    tags: ["UI Design", "HTML/CSS", "Personal Project"],
     link: null,
   },
   wip: {
@@ -1500,13 +1497,13 @@ const projects = {
     emoji: "✨",
     theme: "wip",
     bio: { role: "Always building", timeline: "Ongoing", stack: "????" },
-    tldr: "There are always 2–3 things cooking at any given time. From AI experiments to little design tools to things I build just because they seem fun. Reach out if you'd like to collaborate — I'm always open to interesting ideas.",
+    tldr: "There are always 2–3 things cooking at any given time. From AI experiments to little design tools to things I build just because they seem fun. Reach out if you'd like to collaborate, I'm always open to interesting ideas ~",
     bullets: [
-      "Currently exploring AI-native UI patterns and agentic interfaces.",
-      "Experimenting with WebGL / Three.js for interactive data visualization.",
-      "Building a few tools I personally wish existed.",
+      "Currently exploring AI-native UI patterns and agentic interfaces",
+      "Experimenting with WebGL for interactive data visualization",
+      "Building a few tools I personally wish existed",
     ],
-    tags: ["AI", "React", "Three.js", "Coming Soon"],
+    tags: ["AI", "React", "SQL", "Coming Soon"],
     link: "https://linkedin.com/in/bodmer-sarah?subject=Collab idea!"
   },
 };
